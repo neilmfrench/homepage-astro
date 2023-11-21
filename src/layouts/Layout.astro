@@ -1,0 +1,76 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤪</text></svg>">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global lang="scss">
+  html.dark {
+    background-color:  #0A0A0A;
+    color: #fff;
+
+    a {
+      color: #ff4040;
+
+      
+      &:visited {
+        color: #ff4040;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        background-color: #ff4040;
+        color: white;
+      }
+    }
+  }
+
+  html.gradient { 
+    // kept here for reference
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+
+    &:visited {
+      color: blue;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      background-color: blue;
+      color: white;
+    }
+  }
+
+  button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
+  body { 
+    visibility: hidden;
+  }
+</style>

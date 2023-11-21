@@ -1,0 +1,18 @@
+{
+  "name": "homepage-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "POD_NAME=fake CLUSTER_NAME=fake astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^6.0.3",
+    "@fontsource/roboto-mono": "^5.0.13",
+    "astro": "^3.3.0",
+    "sass": "^1.69.3"
+  }
+}
